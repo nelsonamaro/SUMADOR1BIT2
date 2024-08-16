@@ -23,9 +23,9 @@ wire s1,c1,s2;
     C_XOR U5 (.OUT(uo_out[1]), .A(s2), .B(c1));
     
   // All output pins must be assigned. If not used, assign to 0.
-assign uo_out  = uo_out [7:2]=6'b0;
-assign uio_out [7:0]=8'b0;
-assign uio_oe [7:0]= 8'b0;
+    assign uo_out [7:2]= 6'b0;
+    assign uio_out [7:0]= 8'b0;
+    assign uio_oe [7:0]=  8'b0;
 
   // List all unused inputs to prevent warnings
     wire _unused = &{ena, clk, rst_n, ui_in [7:3], uio_in [7:0], 1'b0};
